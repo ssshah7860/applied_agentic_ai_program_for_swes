@@ -1,0 +1,39 @@
+OPENAI API KEY – PREREQUISITES & TROUBLESHOOTING
+
+ALLOWED MODELS
+
+Your Interview Kickstart OpenAI API key provides access to the following models. Please use only these models for the course projects:
+
+• gpt-4o-mini
+• gpt-4o
+• tts-1
+• whisper-1
+• omni-moderation-latest
+• text-embedding-3-small
+• text-embedding-3-large
+• text-embedding-ada-002
+
+TEST YOUR PROJECT BEFORE THE CLASS
+
+Please try to run the project before the live class by following the provided instructions. This will help you identify and resolve any setup or configuration issues in advance.
+
+IF YOU FACE A RATE LIMIT OR QUOTA ERROR DURING THE CLASS
+
+When multiple learners run the same models simultaneously, some models may experience high usage temporarily. You may see errors such as:
+
+• "Rate limit exceeded"
+• "Quota exceeded"
+
+If you face these errors:
+
+Wait for 5–10 minutes and try running the project again.
+Your API key has sufficient credits for the course projects, so there is no need to worry about the error immediately.
+If the issue still persists, try running the project again after the class.
+
+IF YOUR API KEY IS NOT WORKING OR APPEARS INVALID
+
+If you find that your API key is not working or appears to be invalid, please test it using the OpenAI API Key Tester:
+
+https://trevorfox.com/api-key-tester/openai/
+
+If the key is still not working after testing, please contact the Operations team for support.

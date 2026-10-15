@@ -1,0 +1,26 @@
+#Step 1 — Navigate to the correct folder
+cd "C:\sangeeta\git\applied_agentic_ai_program_for_swes\class_02_rag_powered_knowledge_agents_part_1\inclass_practice\support_desk_rag_workshop"
+
+# Step 2 — Verify Python 3.12
+py -3.12 --version
+
+
+#Step 3 — Create your virtual environment (.venv)
+py -3.12 -m venv .venv
+
+# verify
+dir -Force .venv
+
+#Step 4 — Activate your virtual environment
+.\.venv\Scripts\Activate.ps1
+
+#Step 5 — Install the project dependencies
+pip install -r requirements.txt
+
+#load_dotenv()
+# Locate the shared .env file at the repository root
+from pathlib import Path
+root_env = Path(__file__).resolve().parents[5] / ".env"
+
+# Load environment variables
+load_dotenv(root_env)
