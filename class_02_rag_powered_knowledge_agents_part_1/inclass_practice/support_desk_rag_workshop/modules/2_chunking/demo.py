@@ -62,7 +62,8 @@ print("="*80)
 # Load our support ticket dataset
 # These are relatively SHORT documents - good for demonstrating chunking concepts
 # In real scenarios, you'd chunk PDFs, articles, manuals (much longer!)
-with open('../../data/synthetic_tickets.json', 'r') as f:
+tickets_path = Path(__file__).resolve().parents[2] / 'data' / 'synthetic_tickets.json'
+with open(tickets_path, 'r') as f:
     tickets = json.load(f)
 print(f"\nLoaded {len(tickets)} support tickets")
 
@@ -134,11 +135,16 @@ print(f"\nSample document length: {len(documents[0].page_content)} characters")
 # CONS: May split mid-word or mid-sentence (no semantic awareness)
 # =============================================================================
 print("\n--- Strategy 1: Fixed-Size Chunking ---")
-
+separators=[
+        "\n\n",  # 1st: Paragraph breaks (best split point)
+        "\n",    # 2nd: Line breaks
+        ". ",    # 3rd: Sentence boundaries
+        " "      # 4th: Word boundaries (last resort for text)
+    ]
 fixed_splitter = CharacterTextSplitter(
     chunk_size=200,      # Maximum characters per chunk
     chunk_overlap=20,    # Characters to repeat between chunks (10% overlap)
-    separator="\n"       # Prefer splitting on newlines when possible
+    separator=separators       # Prefer splitting on newlines when possible
 )
 fixed_chunks = fixed_splitter.split_documents(documents)
 

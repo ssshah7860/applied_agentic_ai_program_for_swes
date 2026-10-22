@@ -24,3 +24,12 @@ root_env = Path(__file__).resolve().parents[5] / ".env"
 
 # Load environment variables
 load_dotenv(root_env)
+
+
+to run chroma  db
+cd C:\sangeeta\git\applied_agentic_ai_program_for_swes\class_02_rag_powered_knowledge_agents_part_1\inclass_practice\support_desk_rag_workshop\modules\2_chunking
+ chroma run .\config.yaml   
+
+to run chromadb-ui
+cd C:\sangeeta\git\chromadb-ui
+npm run dev

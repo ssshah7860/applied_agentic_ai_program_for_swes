@@ -95,7 +95,8 @@ print(f"Embedding dimension: {embedding_dim}")
 # LOAD DATA: Support Tickets
 # =============================================================================
 print("\nLoading support tickets...")
-with open('../../data/synthetic_tickets.json', 'r') as f:
+file = Path(__file__).resolve().parents[2] / "data/synthetic_tickets.json"
+with open(Path(__file__).resolve().parents[2] / 'data/synthetic_tickets.json', 'r') as f:
     tickets = json.load(f)
 print(f"Loaded {len(tickets)} support tickets")
 
@@ -434,7 +435,7 @@ test_queries = [
     "Emails are not being sent"
 ]
 
-query_resp = client.embeddings.create(input=[test_queries], model=embedding_model)
+query_resp = client.embeddings.create(input=test_queries, model=embedding_model)
 print("\nTesting semantic search with different queries:")
 for test_query in test_queries:
     # Generate query embedding
