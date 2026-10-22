@@ -1,0 +1,5 @@
+port: 8000
+listen_address: "127.0.0.1"
+persist_path: "./chroma_db"
+cors_allow_origins:
+  - "http://localhost:8090"
