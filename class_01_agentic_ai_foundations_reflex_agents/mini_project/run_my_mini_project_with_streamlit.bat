@@ -1,0 +1,1 @@
+python -m streamlit run my_mini_project.py
