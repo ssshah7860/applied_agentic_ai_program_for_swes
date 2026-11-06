@@ -233,6 +233,7 @@ def example_11_chroma_only_persistence():
     from chromadb.utils.embedding_functions import OpenAIEmbeddingFunction
 
     folder = Path(__file__).with_name("indexing_chroma_only_db")
+    print(f"----------{folder}")
     client = chromadb.PersistentClient(path=str(folder))
     embedder = OpenAIEmbeddingFunction(
         api_key=os.environ["OPENAI_API_KEY"], model_name="text-embedding-3-small"
