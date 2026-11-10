@@ -424,7 +424,7 @@ def markdown_chunking(
 # ============================================================
 def html_chunking(
     text: str | None = None,
-    save_to_chroma: bool = False,
+    save_to_chroma: bool = True,
 ) -> list[Document]:
     """Split HTML by its heading tags and return Documents."""
     if text is None:
